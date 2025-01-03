@@ -10,6 +10,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -27,10 +31,13 @@
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
+                        <a class="nav-link" href="#">Health</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
+                        <a class="nav-link" href="#">Location</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Shop</a>
                     </li>
                 </ul>
 
@@ -41,36 +48,44 @@
                 <!-- Right-side links -->
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="#">Become A Retailer</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="#">Contact Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Support</a>
+                        <a class="nav-link" href="#">Receipe</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <!-- <img src="./Assets/cart-icon.png" class="rounded-circle" alt="" height="20px"> -->
+                        <i class="fa-solid fa-bag-shopping cartIcon" style="color: #000000;"></i>
+                        <sup class="translate-middle badge rounded-pill bg-danger" id="cart-counts">0</sup>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+    <div class="cart-container d-none"></div>
 
     <section id="start">
         <div class="container-fluid p-5">
             <div class="row">
                 <div class="col-lg-6 left-content">
-                    <p class="text-sm fs-1">
-                        The <span>De Simone <br>
-                            Formulation</span> unique <br> and certified by the<br> 
-                        Inventor 
+                    <p class="text-sm fs-1 lh-1" style="font-size: 50px !important;">
+                        The <span class="fw-bolder" style="color: #073052;">De Simone <br>
+                            Formulation</span> unique <br> and certified by <span class="fw-bolder" style="color: #00abd1;">the<br>
+                        Inventor</span>
                     </p>
                     <p class="text-sm fs-5">
                         The De Simone Formulation unique and certified <br>
                         by the Inventor
                     </p>
-                    
+
                 </div>
                 <div class="col-lg-6">
-                    <img src="./Assets/cds_450_v2-1.png" alt="" height="300px" style="z-index: 2;" >
+                    <img src="./Assets/cds_450_v2-1.png" alt="" height="400px" style="z-index: 2;">
                 </div>
             </div>
         </div>
@@ -80,7 +95,8 @@
         <div class="container-fluid">
             <div class="row p-5">
                 <div class="col-lg-6 left-content">
-                    <img src="./Assets/professor_desimone-1.png" alt="prof" class="shadow-lg p-1 mt-4 mb-5 ms-2 bg-body-tertiary rounded-pill" height="500px" width="500px">
+                    <img src="./Assets/professor_desimone-1.png" alt="prof"
+                        class="shadow-lg p-1 mt-4 mb-5 ms-2 bg-body-tertiary rounded-pill" height="500px" width="500px">
                 </div>
 
                 <div class="col-lg-6 right-content mt-5">
@@ -103,7 +119,7 @@
                         controlled clinical studies, ensures that the benefits observed in
                         clinical trials are replicable in everyday use
                     </p>
-                    <button class="btn btn-primary rounded-5 mt-3">VIEW PRODUCTS</button>    
+                    <button class="btn btn-primary rounded-5 mt-3">VIEW PRODUCTS</button>
                 </div>
             </div>
         </div>
@@ -140,10 +156,10 @@
                         Supported by solid scientific evidence, CDS22-formula is highly effective in the
                         dietary management of dysbiosis and other gastrointestinal conditions, offering
                         proven and replicable clinical results
-                    </p>    
+                    </p>
                 </div>
                 <div class="col-lg-6">
-                    <img src="./Assets/Cycle.png" alt="" height="500px" >
+                    <img src="./Assets/Cycle.png" alt="" height="500px">
                 </div>
             </div>
         </div>
@@ -159,25 +175,37 @@
                 <!-- Right Column -->
                 <div class="col-md-10 right-col">
                     <div class="decorative-border p-5 rounded-5">
-                        <p><strong>CDS22-formula supports the dietary management of intestinal dysbiosis, contributing to well-being in cases of intestinal disorders connected to irritable bowel syndrome, ulcerative colitis, and pouchitis.</strong></p>
+                        <p><strong>CDS22-formula supports the dietary management of intestinal dysbiosis, contributing
+                                to well-being in cases of intestinal disorders connected to irritable bowel syndrome,
+                                ulcerative colitis, and pouchitis.</strong></p>
 
                         <h4>Control of intestinal dysbiosis:</h4>
-                        <p>Intestinal dysbiosis is a condition where the natural balance of microorganisms in the intestine is altered, causing various gastrointestinal disorders. Controlling dysbiosis is crucial for maintaining digestive health, improving patient comfort, and contributing to overall well-being, even in cases of chronic intestinal disorders like irritable bowel syndrome, ulcerative colitis, and pouchitis.</p>
+                        <p>Intestinal dysbiosis is a condition where the natural balance of microorganisms in the
+                            intestine is altered, causing various gastrointestinal disorders. Controlling dysbiosis is
+                            crucial for maintaining digestive health, improving patient comfort, and contributing to
+                            overall well-being, even in cases of chronic intestinal disorders like irritable bowel
+                            syndrome, ulcerative colitis, and pouchitis.</p>
 
                         <h4>Immediate and prolonged restoration of intestinal flora:</h4>
-                        <p>CDS22-formula is ideal for both acute and chronic episodes of intestinal dysbiosis. It reduces the severity and duration of symptoms, improving patient comfort and accelerating recovery.</p>
+                        <p>CDS22-formula is ideal for both acute and chronic episodes of intestinal dysbiosis. It
+                            reduces the severity and duration of symptoms, improving patient comfort and accelerating
+                            recovery.</p>
 
                         <h4>Variety of Dosages:</h4>
-                        <p>Available in different formats and dosages to support intestinal health and adapt to individual dietary needs, offering flexibility to healthcare professionals in personalizing supplementation.</p>
+                        <p>Available in different formats and dosages to support intestinal health and adapt to
+                            individual dietary needs, offering flexibility to healthcare professionals in personalizing
+                            supplementation.</p>
 
                         <h4>Original Formulation:</h4>
                         <p>CDS22-formula is the original formulation designed to maximize intestinal well-being.</p>
 
                         <h4>Guaranteed Safety:</h4>
-                        <p>Every dose has been tested to ensure maximum efficacy and safety, maintaining the highest quality standards from raw material to packaging.</p>
+                        <p>Every dose has been tested to ensure maximum efficacy and safety, maintaining the highest
+                            quality standards from raw material to packaging.</p>
 
                         <h4>Affordability:</h4>
-                        <p>CDS22-formula offers superior value compared to probiotics containing equivalent quantities of bacteria.</p>
+                        <p>CDS22-formula offers superior value compared to probiotics containing equivalent quantities
+                            of bacteria.</p>
                     </div>
                 </div>
             </div>
@@ -188,46 +216,67 @@
         <div class="container-fluid">
             <div class="row p-5">
                 <div class="col-lg-12 p-4 mb-2">
-                    <h1 class="display-5 fw-bold">De <span style="color: rgb(254, 0, 174);">Simone</span> <span style="color: rgb(39, 166, 220);">Formulation</span></h1>
-                    <p class="text-sm fs-2 mx-auto text-justify" style="font-size: 15px !important;">The De Simone Formulation contained in CDS22-formula is the result of pioneering research by Professor Claudio De Simone (MD, FAGA), who redefined
-                        therapeutic approaches to intestinal health by introducing the use of high concentration probiotic mixtures to dietetically manage acute and chronic
+                    <h1 class="display-5 fw-bold">De <span style="color: rgb(254, 0, 174);">Simone</span> <span
+                            style="color: rgb(39, 166, 220);">Formulation</span></h1>
+                    <p class="text-sm fs-2 mx-auto text-justify" style="font-size: 15px !important;">The De Simone
+                        Formulation contained in CDS22-formula is the result of pioneering research by Professor Claudio
+                        De Simone (MD, FAGA), who redefined
+                        therapeutic approaches to intestinal health by introducing the use of high concentration
+                        probiotic mixtures to dietetically manage acute and chronic
                         gastrointestinal disorders.
                     </p>
                     <p class="text-sm fs-2 mx-auto text-justify" style="font-size: 15px !important;">
-                        His interest in the intestinal microbiota dates back to the 1980s when the importance of the intestinal flora s role was just beginning to be
-                        understood. Professor De Simone is an honorary member of the American College of Gastroenterology and, after graduating in Medicine and
-                        Surgery, specialized in gastroenterology, allergology, and clinical immunology. He taught Infectious Diseases at the University of L’Aquila (Italy).
+                        His interest in the intestinal microbiota dates back to the 1980s when the importance of the
+                        intestinal flora s role was just beginning to be
+                        understood. Professor De Simone is an honorary member of the American College of
+                        Gastroenterology and, after graduating in Medicine and
+                        Surgery, specialized in gastroenterology, allergology, and clinical immunology. He taught
+                        Infectious Diseases at the University of L’Aquila (Italy).
                     </p>
                     <p class="text-sm fs-2 mx-auto text-justify" style="font-size: 15px !important;">
                         He has published over 200 clinical studies, scientific articles, and book chapters.
                     </p>
                     <p class="text-sm fs-2 mx-auto text-justify" style="font-size: 15px !important;">
-                        Since the commercial launch of his renowned De Simone Formulation in the 1990s, the Professor has actively advocated for better regulation and quality
+                        Since the commercial launch of his renowned De Simone Formulation in the 1990s, the Professor
+                        has actively advocated for better regulation and quality
                         control of probiotics, highlighting the potential health and well-being risks.
                     </p>
                     <p class="text-sm fs-2 mx-auto text-justify" style="font-size: 15px !important;">
-                        As emphasized by Professor De Simone in numerous conferences and publications, many marketed probiotics have not been clinically tested or may not
-                        correspond to the original clinically tested formulations when marketed, causing substantial differences in the safety and efficacy of the final product (De
+                        As emphasized by Professor De Simone in numerous conferences and publications, many marketed
+                        probiotics have not been clinically tested or may not
+                        correspond to the original clinically tested formulations when marketed, causing substantial
+                        differences in the safety and efficacy of the final product (De
                         Simone C. Clinical Gastroenterology and Hepatology Vol. 16 No. 9 2018).
                     </p>
                     <p class="text-sm fs-2 mx-auto text-justify" style="font-size: 15px !important;">
-                        Current regulations often do not require thorough comparative studies to ensure that changes in manufacturing processes do not compromise the efficacy and
+                        Current regulations often do not require thorough comparative studies to ensure that changes in
+                        manufacturing processes do not compromise the efficacy and
                         safety of the commercially distributed probiotic product.
                     </p>
                 </div>
                 <div class="col-lg-12 p-3">
-                    <h1 class="display-5 fw-bold lh-1">There is ONE <br> De <span style="color: rgb(254, 0, 174);">Simone</span> <span style="color: rgb(39, 166, 220);">Formulation</span></h1>
-                    <p class="text-sm fs-2 mx-auto text-justify" style="font-size: 15px !important;">The lack of strict regulation and the possibility for manufacturers to modify formulations without adequately informing consumers pose a threat to public trust.
-                        In the past, the De Simone Formulation (DSF) was sold under the brand name VSL#3®*, by VSL Pharmaceuticals and Actial Srl.
+                    <h1 class="display-5 fw-bold lh-1">There is ONE <br> De <span
+                            style="color: rgb(254, 0, 174);">Simone</span> <span
+                            style="color: rgb(39, 166, 220);">Formulation</span></h1>
+                    <p class="text-sm fs-2 mx-auto text-justify" style="font-size: 15px !important;">The lack of strict
+                        regulation and the possibility for manufacturers to modify formulations without adequately
+                        informing consumers pose a threat to public trust.
+                        In the past, the De Simone Formulation (DSF) was sold under the brand name VSL#3®*, by VSL
+                        Pharmaceuticals and Actial Srl.
                     </p>
                     <p class="text-sm fs-2 mx-auto text-justify lh-1" style="font-size: 15px !important;">
-                        In 2019, VSL#3® distributors were found guilty of false advertising (for more information:Federal Judge Upholds $18M Verdict, Blocks False Advertising of
-                        VSL#3, Schulman Bhattacharya). Recently, the European Crohn s and Colitis Organisation (ECCO) has updated its guidelines to clarify that pre-2016 literature
-                        references to VSL#3® exclusively refer to DSF (ECCO, ECCO News, 2023). In 2024, ESPEN (European Society for Clinical Nutrition and Metabolism) published
-                        the article <u>“Clarifying Correct Attributions in Scientific Literature: The Case of the De Simone Formulation and VSL#3®“</u>, which reiterates the above.
+                        In 2019, VSL#3® distributors were found guilty of false advertising (for more
+                        information:Federal Judge Upholds $18M Verdict, Blocks False Advertising of
+                        VSL#3, Schulman Bhattacharya). Recently, the European Crohn s and Colitis Organisation (ECCO)
+                        has updated its guidelines to clarify that pre-2016 literature
+                        references to VSL#3® exclusively refer to DSF (ECCO, ECCO News, 2023). In 2024, ESPEN (European
+                        Society for Clinical Nutrition and Metabolism) published
+                        the article <u>“Clarifying Correct Attributions in Scientific Literature: The Case of the De
+                            Simone Formulation and VSL#3®“</u>, which reiterates the above.
                     </p>
                     <p class="text-sm fs-2 mx-auto" style="font-size: 15px !important;">
-                        The De Simone Formulation is sold under the brand name “Visbiome  in the USA and Canada (Exegi) and under the brand name De Simone Formulation in
+                        The De Simone Formulation is sold under the brand name “Visbiome in the USA and Canada (Exegi)
+                        and under the brand name De Simone Formulation in
                         Korea (HectoHealthcare).
                     </p>
                     <p class="text-sm fs-2 mx-auto" style="font-size: 15px !important;">
@@ -238,16 +287,277 @@
         </div>
     </section>
 
+    <!-- ====================== PRODUCT PACKAGING ===============================  -->
     <section id="packaging">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="text-center fs-1 display-5 fw-bold">Product packaging</h1>
+        <div class="container-fluid py-5">
+            <!-- Section Title -->
+            <div class="section-title justify-content-center p-3">
+                <h1 class="text-center fs-1 display-5 fw-bold">Product packaging</h1>
+                <p class="text-center">CDS22-formula, is available in sachets and capsules to meet specific tastes and
+                    needs.
+                    <br> Each format of CDS22-formula is gluten-free and vegetarian.
+                </p>
+            </div>
+
+            <!-- Carousel -->
+            <div id="productCarousel" class="carousel slide mt-2" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- First Slide (First 3 Products) -->
+                    <div class="carousel-item active">
+                        <div class="row justify-content-center">
+                            <!-- Product 1 -->
+                            <div class="col-md-4 text-center">
+                                <div class="product-card">
+                                    <img src="./Assets/cds_112_v2-1.png" height="300px" width="300px" alt="Product 1">
+                                    <h3 class="product-title">CDS22-formula</h3>
+                                    <p class="product-subtitle">900 billion sachets</p>
+                                    <p class="product-desc">Superior power<br>Potency: 900 billion live bacteria per
+                                        sachet</p>
+                                    <button class="btn btn-shop rounded-5 border border-primary" id="shop-now"
+                                        data-name="CDS22-formula (900 billion sachets)" data-price="100"
+                                        data-image="./Assets/cds_112_v2-1.png">Shop
+                                        Now</button>
+                                </div>
+                            </div>
+                            <!-- Product 2 -->
+                            <div class="col-md-4 text-center">
+                                <div class="product-card">
+                                    <img src="./Assets/cds_450_v2-1.png" height="300px" width="300px" alt="Product 2">
+                                    <h3 class="product-title">CDS22-formula</h3>
+                                    <p class="product-subtitle">450 billion sachets</p>
+                                    <p class="product-desc">Strong and convenient<br>Potency: 450 billion live bacteria
+                                        per sachet</p>
+                                    <button class="btn btn-shop rounded-5 border border-primary" id="shop-now"
+                                        data-name="CDS22-formula (900 billion sachets)" data-price="200"
+                                        data-image="./Assets/cds_450_v2-1.png">Shop
+                                        Now</button>
+                                </div>
+                            </div>
+                            <!-- Product 3 -->
+                            <div class="col-md-4 text-center">
+                                <div class="product-card">
+                                    <img src="./Assets/cds_112_v2-1.png" height="300px" width="300px" alt="Product 3">
+                                    <h3 class="product-title">CDS22-formula</h3>
+                                    <p class="product-subtitle">112 billion capsules</p>
+                                    <p class="product-desc">Efficient and flexible<br>Potency: 112 billion live bacteria
+                                        per capsule</p>
+                                    <button class="btn btn-shop rounded-5 border border-primary" id="shop-now"
+                                        data-name="CDS22-formula (900 billion sachets)" data-price="300"
+                                        data-image="./Assets/cds_112_v2-1.png">Shop Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <!-- Product 1 -->
+                            <div class="col-md-4 text-center">
+                                <div class="product-card">
+                                    <img src="./Assets/cds_112_v2-1.png" height="300px" width="300px" alt="Product 1">
+                                    <h3 class="product-title">CDS22-formula</h3>
+                                    <p class="product-subtitle">900 billion sachets</p>
+                                    <p class="product-desc">Superior power<br>Potency: 900 billion live bacteria per
+                                        sachet</p>
+                                    <button class="btn btn-shop rounded-5 border border-primary">Shop Now</button>
+                                </div>
+                            </div>
+                            <!-- Product 2 -->
+                            <div class="col-md-4 text-center">
+                                <div class="product-card">
+                                    <img src="./Assets/cds_450_v2-1.png" height="300px" width="300px" alt="Product 2">
+                                    <h3 class="product-title">CDS22-formula</h3>
+                                    <p class="product-subtitle">450 billion sachets</p>
+                                    <p class="product-desc">Strong and convenient<br>Potency: 450 billion live bacteria
+                                        per sachet</p>
+                                    <button class="btn btn-shop rounded-5 border border-primary">Shop Now</button>
+                                </div>
+                            </div>
+                            <!-- Product 3 -->
+                            <div class="col-md-4 text-center">
+                                <div class="product-card">
+                                    <img src="./Assets/cds_112_v2-1.png" height="300px" width="300px" alt="Product 3">
+                                    <h3 class="product-title">CDS22-formula</h3>
+                                    <p class="product-subtitle">112 billion capsules</p>
+                                    <p class="product-desc">Efficient and flexible<br>Potency: 112 billion live bacteria
+                                        per capsule</p>
+                                    <button class="btn btn-shop rounded-5 border border-primary">Shop Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#productCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <div class="container-fluid">
+                <div class="row p-5">
+                    <h5 style="color: rgb(39, 166, 220);">Follow the dosage instructions indicated on the packaging.</h5>
+                    <ul class="list-unstyled mt-3">
+                        <li>• Do not exceed the stated recommended daily dose unless otherwise advised by a doctor.</li>
+                        <li>• Store the product in the refrigerator at a temperature of <strong>2-8°C</strong> and away from light. The product can withstand room temperature (max <strong>25°C</strong>) for one week without altering its effectiveness.</li>
+                        <li>• <strong>CDS22-formula</strong> is a food supplement; it does not replace a varied and balanced diet.</li>
+                        <li>• Keep out of reach of young children.</li>
+                        <li>• This product is not intended for the diagnosis, treatment, cure, or prevention of diseases.</li>
+                    </ul>
+                </div>
+                
+            </div>
+
+        </div>
+    </section>
+
+    <section class="container my-5">
+        <h4 class="fw-bold faq-heading text-start mb-2 fs-1 p-3">FAQ</h4>
+        <div class="accordion" id="faqAccordion">
+            <!-- FAQ Item 1 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="faqHeadingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne" aria-expanded="true" aria-controls="faqCollapseOne">
+                        What does CDS22-formula contain?
+                    </button>
+                </h2>
+                <div id="faqCollapseOne" class="accordion-collapse collapse show" aria-labelledby="faqHeadingOne" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        The dosage instructions are indicated on the packaging. Please do not exceed the recommended daily dose unless advised by a doctor.
+                    </div>
+                </div>
+            </div>
+    
+            <!-- FAQ Item 2 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="faqHeadingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
+                        Where can i find CDS22-formula?.
+                    </button>
+                </h2>
+                <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Store the product in a refrigerator at 2-8°C and away from light. It can withstand room temperature (max 25°C) for one week without altering effectiveness.
+                    </div>
+                </div>
+            </div>
+    
+            <!-- FAQ Item 3 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="faqHeadingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
+                        Why should I take CDS22-Formula?
+                    </button>
+                </h2>
+                <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        No, CDS22-formula is a food supplement and does not replace a varied and balanced diet.
+                    </div>
+                </div>
+            </div>
+    
+            <!-- FAQ Item 4 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="faqHeadingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour">
+                        How do I take CDS22-Formula?
+                    </button>
+                </h2>
+                <div id="faqCollapseFour" class="accordion-collapse collapse" aria-labelledby="faqHeadingFour" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Keep this product out of reach of young children.
+                    </div>
+                </div>
+            </div>
+    
+            <!-- FAQ Item 5 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="faqHeadingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour">
+                        Does CDS22-formula contain allergens?
+                    </button>
+                </h2>
+                <div id="faqCollapseFour" class="accordion-collapse collapse" aria-labelledby="faqHeadingFour" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Keep this product out of reach of young children.
+                    </div>
+                </div>
+            </div>
+    
+            <!-- FAQ Item 6 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="faqHeadingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour">
+                        Why must CDS22-formula be stored in the refrigerator? 
+                    </button>
+                </h2>
+                <div id="faqCollapseFour" class="accordion-collapse collapse" aria-labelledby="faqHeadingFour" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Keep this product out of reach of young children.
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <section id="contact" class="container py-5">
+        <h2 class="text-center">Say Hi</h2>
+        
+        <!-- Radio Buttons -->
+        <div class="text-center mb-4">
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="contactOption" id="contactOption1" value="Say Hi" checked>
+                <label class="form-check-label" for="contactOption1">Say Hi</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="contactOption" id="contactOption2" value="Get a Quote">
+                <label class="form-check-label" for="contactOption2">Get a Quote</label>
+            </div>
+        </div>
+    
+        <form id="contact-form" class="bg-light p-4 rounded">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="3" required></textarea>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="privacyCheck" required>
+                <label class="form-check-label" for="privacyCheck">
+                    I consent to the processing of personal data after reading the <a href="#">Privacy Policy</a>.
+                </label>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">Send Message</button>
+        </form>
+    
+        <div class="product-display text-center mt-5">
+            <h3>CDS22-formula</h3>
+            <img src="./Assets/cds_450_v2-1.png" alt="CDS22-formula" class="product-image">
+            <p class="product-description">450 billion sachets</p>
+            <p class="product-potency">Potency: 450 billion live bacteria per sachet</p>
+        </div>
+    
+        <footer class="text-center mt-5">
+            <p>EOS2021 S.R.L. Via Nuoro, 16 - 00040 Ardea (Roma) Piva: 02102651003</p>
+        </footer>
+    </section>
+    <script type="module" src="./firebaseConfig.js"></script>
     <script type="module" src="./app.js"></script>
 </body>
+
 </html>
