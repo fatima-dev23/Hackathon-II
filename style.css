@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    }
+
+    nav{
+        background-color: #fff;
+    }
+
+    nav+section{
+        background-color: #f5f5f5;
+    }
+
+    .container {
+    max-width: 1200px;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    }
+
+    .left-col {
+    position: relative;
+    /* background: #f5f5f5; */
+    text-align: center;
+    padding: 0;
+    }
+
+    .left-col::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    /* background: linear-gradient(to right, #ffa726, #ff7043); */
+    }
+
+    .vertical-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #004d8d;
+    white-space: nowrap;
+    }
+
+    .right-col {
+    padding: 30px;
+    /* border-left: 2px dashed #ccc; */
+    }
+
+    .right-col h4 {
+    color: #1e88e5;
+    font-weight: bold;
+    }
+
+    .right-col p {
+    margin-bottom: 2px;
+    line-height: 1.6;
+    }
+
+    .decorative-border {
+    border: 5px dashed #004d8d;
+    border-radius: 10px;
+    padding: 20px;
+    }
+
+    /* #doctor .cylinder-img{
+        background-size: contain;
+        border-radius: 60% / 30%;
+        margin-left: 90px;
+    } */
+
+    #start .container-fluid{
+        padding: 89px !important;
+    }
+
+    #work{
+        background-color: #f5f5f5;
+    }
+
+    #benefits{
+        background-color: #f9f9f9;
+    }
