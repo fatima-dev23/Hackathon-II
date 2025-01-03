@@ -21,4 +21,28 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app)
 console.log(db);
 
+document.getElementById('contact-form').addEventListener('submit', async (e) => {
+    e.preventDefault(); // Prevent the default form submission
+
+    // Get form values
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    try {
+        // Add a new document with a generated ID in the "users" collection
+        await addDoc(collection(db, 'users'), {
+            name: name,
+            email: email,
+            message: message
+        });
+        alert('Message sent successfully!');
+        // Optionally, you can reset the form
+        document.getElementById('contact-form').reset();
+    } catch (error) {
+        console.error("Error adding document: ", error);
+        alert('Error sending message. Please try again.');
+    }
+});
+
 export {db, collection, addDoc  }

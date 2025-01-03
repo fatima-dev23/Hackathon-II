@@ -508,54 +508,92 @@
         </div>
     </section>
 
-    <section id="contact" class="container py-5">
-        <h2 class="text-center">Say Hi</h2>
-        
-        <!-- Radio Buttons -->
-        <div class="text-center mb-4">
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="contactOption" id="contactOption1" value="Say Hi" checked>
-                <label class="form-check-label" for="contactOption1">Say Hi</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="contactOption" id="contactOption2" value="Get a Quote">
-                <label class="form-check-label" for="contactOption2">Get a Quote</label>
-            </div>
-        </div>
-    
-        <form id="contact-form" class="bg-light p-4 rounded">
-            <div class="mb-3">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" required>
-            </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" required>
-            </div>
-            <div class="mb-3">
-                <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="message" rows="3" required></textarea>
+    <!-- Contact Section -->
+<section id="contact" class="container py-5">
+    <div class="row align-items-center rounded-custom shadow p-4 bg-light">
+      <!-- Form Section -->
+      <div class="col-lg-6">
+        <form id="contact-form">
+          <!-- Radio Buttons -->
+          <div class="d-flex justify-content-start mb-3">
+            <div class="form-check me-3">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="contactOption"
+                id="sayHi"
+                value="Say Hi"
+                checked
+              />
+              <label class="form-check-label" for="sayHi">Say Hi</label>
             </div>
             <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="privacyCheck" required>
-                <label class="form-check-label" for="privacyCheck">
-                    I consent to the processing of personal data after reading the <a href="#">Privacy Policy</a>.
-                </label>
+              <input
+                class="form-check-input"
+                type="radio"
+                name="contactOption"
+                id="getQuote"
+                value="Get a Quote"
+              />
+              <label class="form-check-label" for="getQuote">Get a Quote</label>
             </div>
-            <button type="submit" class="btn btn-primary mt-3">Send Message</button>
+          </div>
+  
+          <!-- Form Fields -->
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Name" required />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email*</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="Email"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message*</label>
+            <textarea
+              class="form-control"
+              id="message"
+              rows="3"
+              placeholder="Message"
+              required
+            ></textarea>
+          </div>
+  
+          <!-- Privacy Checkbox -->
+          <div class="form-check mb-3">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="privacyCheck"
+              required
+            />
+            <label class="form-check-label" for="privacyCheck">
+              I consent to the processing of personal data after reading the
+              <a href="#">Privacy Policy</a>.
+            </label>
+          </div>
+  
+          <button type="submit" class="btn btn-primary w-100">Send Message</button>
         </form>
-    
-        <div class="product-display text-center mt-5">
-            <h3>CDS22-formula</h3>
-            <img src="./Assets/cds_450_v2-1.png" alt="CDS22-formula" class="product-image">
-            <p class="product-description">450 billion sachets</p>
-            <p class="product-potency">Potency: 450 billion live bacteria per sachet</p>
-        </div>
-    
-        <footer class="text-center mt-5">
-            <p>EOS2021 S.R.L. Via Nuoro, 16 - 00040 Ardea (Roma) Piva: 02102651003</p>
-        </footer>
-    </section>
+      </div>
+  
+      <!-- Product Section -->
+      <div class="col-lg-6 text-center">
+        <h3 class="product-title">CDS22-formula</h3>
+        <img
+          src="./Assets/cds_450_v2-1.png"
+          alt="CDS22-formula"
+          class="img-fluid product-image"
+        />
+      </div>
+    </div>
+  </section>
     <script type="module" src="./firebaseConfig.js"></script>
     <script type="module" src="./app.js"></script>
 </body>
