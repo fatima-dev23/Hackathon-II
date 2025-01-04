@@ -26,12 +26,10 @@ function initializeCartUI() {
     });
 }
 
-// Toggle Cart View
 cartIcon.addEventListener("click", () => {
     cartContainer.classList.toggle("d-none");
 });
 
-// Add Product to Cart
 function addToCart(productName, productPrice, productImage) {
     const existingItem = cartItems.find(item => item.name === productName);
 
@@ -42,26 +40,39 @@ function addToCart(productName, productPrice, productImage) {
     }
 
     updateCartUI();
+
+    Swal.fire({
+        title: "Product Added to Cart",
+        text: `${productName} has been successfully added to your cart.`,
+        icon: "success",
+        confirmButtonText: "OK",
+        timer: 2000,
+        timerProgressBar: true,
+    });
 }
 
 // Update Cart UI
 function updateCartUI() {
     const cartBody = document.getElementById("cart-body");
     const cartTotal = document.getElementById("cart-total");
+    const cartCounts = document.getElementById("cart-counts"); // Reference to the badge element
 
     if (cartItems.length === 0) {
         cartBody.innerHTML = `<p class="text-muted">No items in the cart</p>`;
         cartTotal.textContent = "0 PKR";
+        cartCounts.textContent = ""; // Clear the badge if the cart is empty
         totalAmount = 0;
         return;
     }
 
     cartBody.innerHTML = "";
-
     totalAmount = 0;
+
+    let totalItems = 0; // Track the total number of items in the cart
 
     cartItems.forEach((item, index) => {
         totalAmount += item.price * item.quantity;
+        totalItems += item.quantity; // Accumulate item quantities
 
         const cartItem = document.createElement("div");
         cartItem.className = "d-flex justify-content-between align-items-center mb-2";
@@ -83,7 +94,14 @@ function updateCartUI() {
     });
 
     cartTotal.textContent = `${totalAmount.toFixed(2)} PKR`;
+
+    // Update the cart-counts badge
+    cartCounts.textContent = totalItems;
+
+    // Show/hide the badge based on whether there are items in the cart
+    cartCounts.style.display = totalItems > 0 ? "inline" : "none";
 }
+
 
 // Change Quantity of Items
 function changeQuantity(index, change) {

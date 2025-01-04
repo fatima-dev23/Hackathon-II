@@ -14,10 +14,13 @@
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="shortcut icon" href="./Assets/cds_450_v2-1.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!-- <div class="container-fluid"> -->
     <nav class="navbar navbar-expand-lg p-4">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -25,10 +28,9 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
-                <!-- Left-side links -->
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <ul class="navbar-nav mx-auto gap-5">
+                    <li class="nav-item active">
+                        <a class="nav-link active" href="#">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Health</a>
@@ -42,11 +44,11 @@
                 </ul>
 
                 <!-- Logo -->
-                <a class="navbar-brand mx-auto" href="#"
-                    style="font-size: 2rem;">CDS<span>22</span>-<span><i>formula</i></span></a>
+                <a class="navbar-brand mx-auto" href="#">
+                    <img src="./Assets/logo.png" class="img-responsive" alt="logo" height="30px" width="180px">
+                </a>
 
-                <!-- Right-side links -->
-                <ul class="navbar-nav mx-auto">
+                <ul class="navbar-nav mx-auto gap-5">
                     <li class="nav-item">
                         <a class="nav-link" href="#">Become A Retailer</a>
                     </li>
@@ -61,12 +63,13 @@
                     <li class="nav-item">
                         <!-- <img src="./Assets/cart-icon.png" class="rounded-circle" alt="" height="20px"> -->
                         <i class="fa-solid fa-bag-shopping cartIcon" style="color: #000000;"></i>
-                        <sup class="translate-middle badge rounded-pill bg-danger" id="cart-counts">0</sup>
+                        <sup class="translate-middle badge rounded-pill bg-danger" id="cart-counts"></sup>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+<!-- </div> -->
     <div class="cart-container d-none"></div>
 
     <section id="start">
@@ -75,8 +78,9 @@
                 <div class="col-lg-6 left-content">
                     <p class="text-sm fs-1 lh-1" style="font-size: 50px !important;">
                         The <span class="fw-bolder" style="color: #073052;">De Simone <br>
-                            Formulation</span> unique <br> and certified by <span class="fw-bolder" style="color: #00abd1;">the<br>
-                        Inventor</span>
+                            Formulation</span> unique <br> and certified by <span class="fw-bolder"
+                            style="color: #00abd1;">the<br>
+                            Inventor</span>
                     </p>
                     <p class="text-sm fs-5">
                         The De Simone Formulation unique and certified <br>
@@ -90,6 +94,14 @@
             </div>
         </div>
     </section>
+
+    <div class="custom-shape-divider-top-1735937736">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+            <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+        </svg>
+    </div>
 
     <section id="doctor">
         <div class="container-fluid">
@@ -119,17 +131,26 @@
                         controlled clinical studies, ensures that the benefits observed in
                         clinical trials are replicable in everyday use
                     </p>
-                    <button class="btn btn-primary rounded-5 mt-3">VIEW PRODUCTS</button>
+                    <button class="btn btn-primary rounded-5 mt-3 view">VIEW PRODUCTS</button>
                 </div>
             </div>
         </div>
+        <div class="custom-shape-divider-top-1735937736 doctor-end">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="%2371B7D6"><path d="M0 1v99c134.3 0 153.7-99 296-99H0Z" opacity=".5"></path><path d="M1000 4v86C833.3 90 833.3 3.6 666.7 3.6S500 90 333.3 90 166.7 4 0 4h1000Z" opacity=".5"></path><path d="M617 1v86C372 119 384 1 196 1h421Z" opacity=".5"></path><path d="M1000 0H0v52C62.5 28 125 4 250 4c250 0 250 96 500 96 125 0 187.5-24 250-48V0Z"></path></svg> -->
     </section>
-
+    
+<!--================== WHY  ======================-->
     <section id="work">
         <div class="container-fluid">
             <div class="row p-5">
-                <div class="col-lg-6 left-content">
-                    <h1 class="fw-bold">Why Does It <span>Work</span>?</h1>
+                <div class="col-lg-6 left-content p-4">
+                    <h1 class="fw-bold">Why Does It <span style="color: rgb(254, 0, 174);">Work</span>?</h1>
                     <p class="text-sm fs-2 mx-auto" style="font-size: 15px !important;">
                         Not all probiotics are the same. The overall biological action of a probiotic is not
                         simply the sum of its individual components actions but the result of a complex
@@ -165,14 +186,21 @@
         </div>
     </section>
 
+    <div class="custom-shape-divider-top-1735945307">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+            <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+        </svg>
+    </div>
+
+    <!--============= BENEFITS ================-->
     <section id="benefits">
         <div class="container-fluid">
             <div class="row p-5">
-                <!-- Left Column -->
                 <div class="col-md-2 left-col">
                     <div class="vertical-text fs-1 fw-bold" style="font-size: 90px !important;">Benefits:</div>
                 </div>
-                <!-- Right Column -->
                 <div class="col-md-10 right-col">
                     <div class="decorative-border p-5 rounded-5">
                         <p><strong>CDS22-formula supports the dietary management of intestinal dysbiosis, contributing
@@ -211,12 +239,20 @@
             </div>
         </div>
     </section>
+    <div class="custom-shape-divider-bottom-1735945307">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+            <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+        </svg>
+    </div>
 
+<!--================= FORMULATION ==================-->
     <section id="formulation">
         <div class="container-fluid">
             <div class="row p-5">
                 <div class="col-lg-12 p-4 mb-2">
-                    <h1 class="display-5 fw-bold">De <span style="color: rgb(254, 0, 174);">Simone</span> <span
+                    <h1 class="display-5 fw-bold" style="color: #002441;">De <span style="color: rgb(254, 0, 174);">Simone</span> <span
                             style="color: rgb(39, 166, 220);">Formulation</span></h1>
                     <p class="text-sm fs-2 mx-auto text-justify" style="font-size: 15px !important;">The De Simone
                         Formulation contained in CDS22-formula is the result of pioneering research by Professor Claudio
@@ -255,7 +291,7 @@
                     </p>
                 </div>
                 <div class="col-lg-12 p-3">
-                    <h1 class="display-5 fw-bold lh-1">There is ONE <br> De <span
+                    <h1 class="display-5 fw-bold lh-1"><span style="color:#002441;">There is ONE <br> De </span><span
                             style="color: rgb(254, 0, 174);">Simone</span> <span
                             style="color: rgb(39, 166, 220);">Formulation</span></h1>
                     <p class="text-sm fs-2 mx-auto text-justify" style="font-size: 15px !important;">The lack of strict
@@ -287,10 +323,17 @@
         </div>
     </section>
 
+    <div class="custom-shape-divider-top-1735937736 doctor-end">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+            <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+        </svg>
+    </div>
+
     <!-- ====================== PRODUCT PACKAGING ===============================  -->
     <section id="packaging">
         <div class="container-fluid py-5">
-            <!-- Section Title -->
             <div class="section-title justify-content-center p-3">
                 <h1 class="text-center fs-1 display-5 fw-bold">Product packaging</h1>
                 <p class="text-center">CDS22-formula, is available in sachets and capsules to meet specific tastes and
@@ -302,7 +345,6 @@
             <!-- Carousel -->
             <div id="productCarousel" class="carousel slide mt-2" data-bs-ride="carousel">
                 <div class="carousel-inner">
-                    <!-- First Slide (First 3 Products) -->
                     <div class="carousel-item active">
                         <div class="row justify-content-center">
                             <!-- Product 1 -->
@@ -313,7 +355,7 @@
                                     <p class="product-subtitle">900 billion sachets</p>
                                     <p class="product-desc">Superior power<br>Potency: 900 billion live bacteria per
                                         sachet</p>
-                                    <button class="btn btn-shop rounded-5 border border-primary" id="shop-now"
+                                    <button class="btn btn-shop rounded-5 border border-primary" id="shop-now1"
                                         data-name="CDS22-formula (900 billion sachets)" data-price="100"
                                         data-image="./Assets/cds_112_v2-1.png">Shop
                                         Now</button>
@@ -327,7 +369,7 @@
                                     <p class="product-subtitle">450 billion sachets</p>
                                     <p class="product-desc">Strong and convenient<br>Potency: 450 billion live bacteria
                                         per sachet</p>
-                                    <button class="btn btn-shop rounded-5 border border-primary" id="shop-now"
+                                    <button class="btn btn-shop rounded-5 border border-primary" id="shop-now2"
                                         data-name="CDS22-formula (900 billion sachets)" data-price="200"
                                         data-image="./Assets/cds_450_v2-1.png">Shop
                                         Now</button>
@@ -341,7 +383,7 @@
                                     <p class="product-subtitle">112 billion capsules</p>
                                     <p class="product-desc">Efficient and flexible<br>Potency: 112 billion live bacteria
                                         per capsule</p>
-                                    <button class="btn btn-shop rounded-5 border border-primary" id="shop-now"
+                                    <button class="btn btn-shop rounded-5 border border-primary" id="shop-now3"
                                         data-name="CDS22-formula (900 billion sachets)" data-price="300"
                                         data-image="./Assets/cds_112_v2-1.png">Shop Now</button>
                                 </div>
@@ -360,7 +402,9 @@
                                     <p class="product-subtitle">900 billion sachets</p>
                                     <p class="product-desc">Superior power<br>Potency: 900 billion live bacteria per
                                         sachet</p>
-                                    <button class="btn btn-shop rounded-5 border border-primary">Shop Now</button>
+                                    <button class="btn btn-shop rounded-5 border border-primary" id="shop4" 
+                                    data-name="CDS22-formula" data-price="300"
+                                        data-image="./Assets/cds_450_v2-1.png">Shop Now</button>
                                 </div>
                             </div>
                             <!-- Product 2 -->
@@ -371,7 +415,9 @@
                                     <p class="product-subtitle">450 billion sachets</p>
                                     <p class="product-desc">Strong and convenient<br>Potency: 450 billion live bacteria
                                         per sachet</p>
-                                    <button class="btn btn-shop rounded-5 border border-primary">Shop Now</button>
+                                    <button class="btn btn-shop rounded-5 border border-primary" id="shop5"
+                                    data-name="CDS22-formula (900 billion sachets)" data-price="300"
+                                        data-image="./Assets/cds_112_v2-1.png">Shop Now</button>
                                 </div>
                             </div>
                             <!-- Product 3 -->
@@ -382,14 +428,15 @@
                                     <p class="product-subtitle">112 billion capsules</p>
                                     <p class="product-desc">Efficient and flexible<br>Potency: 112 billion live bacteria
                                         per capsule</p>
-                                    <button class="btn btn-shop rounded-5 border border-primary">Shop Now</button>
+                                    <button class="btn btn-shop rounded-5 border border-primary" id="shop6"
+                                    data-name="CDS22-formula (900 billion sachets)" data-price="300"
+                                    data-image="./Assets/cds_112_v2-1.png">Shop Now</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Carousel Controls -->
                 <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel"
                     data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -404,102 +451,117 @@
 
             <div class="container-fluid">
                 <div class="row p-5">
-                    <h5 style="color: rgb(39, 166, 220);">Follow the dosage instructions indicated on the packaging.</h5>
+                    <h5 style="color: rgb(39, 166, 220);">Follow the dosage instructions indicated on the packaging.
+                    </h5>
                     <ul class="list-unstyled mt-3">
                         <li>• Do not exceed the stated recommended daily dose unless otherwise advised by a doctor.</li>
-                        <li>• Store the product in the refrigerator at a temperature of <strong>2-8°C</strong> and away from light. The product can withstand room temperature (max <strong>25°C</strong>) for one week without altering its effectiveness.</li>
-                        <li>• <strong>CDS22-formula</strong> is a food supplement; it does not replace a varied and balanced diet.</li>
+                        <li>• Store the product in the refrigerator at a temperature of <strong>2-8°C</strong> and away
+                            from light. The product can withstand room temperature (max <strong>25°C</strong>) for one
+                            week without altering its effectiveness.</li>
+                        <li>• <strong>CDS22-formula</strong> is a food supplement; it does not replace a varied and
+                            balanced diet.</li>
                         <li>• Keep out of reach of young children.</li>
-                        <li>• This product is not intended for the diagnosis, treatment, cure, or prevention of diseases.</li>
+                        <li>• This product is not intended for the diagnosis, treatment, cure, or prevention of
+                            diseases.</li>
                     </ul>
                 </div>
-                
+
             </div>
 
         </div>
     </section>
 
+
+<!--===================== FAQ =======================-->
     <section class="container my-5">
         <h4 class="fw-bold faq-heading text-start mb-2 fs-1 p-3">FAQ</h4>
         <div class="accordion" id="faqAccordion">
-            <!-- FAQ Item 1 -->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="faqHeadingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne" aria-expanded="true" aria-controls="faqCollapseOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#faqCollapseOne" aria-expanded="true" aria-controls="faqCollapseOne">
                         What does CDS22-formula contain?
                     </button>
                 </h2>
-                <div id="faqCollapseOne" class="accordion-collapse collapse show" aria-labelledby="faqHeadingOne" data-bs-parent="#faqAccordion">
+                <div id="faqCollapseOne" class="accordion-collapse collapse show" aria-labelledby="faqHeadingOne"
+                    data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                        The dosage instructions are indicated on the packaging. Please do not exceed the recommended daily dose unless advised by a doctor.
+                        The dosage instructions are indicated on the packaging. Please do not exceed the recommended
+                        daily dose unless advised by a doctor.
                     </div>
                 </div>
             </div>
-    
-            <!-- FAQ Item 2 -->
+
             <div class="accordion-item">
                 <h2 class="accordion-header" id="faqHeadingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
                         Where can i find CDS22-formula?.
                     </button>
                 </h2>
-                <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo" data-bs-parent="#faqAccordion">
+                <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo"
+                    data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                        Store the product in a refrigerator at 2-8°C and away from light. It can withstand room temperature (max 25°C) for one week without altering effectiveness.
+                        Store the product in a refrigerator at 2-8°C and away from light. It can withstand room
+                        temperature (max 25°C) for one week without altering effectiveness.
                     </div>
                 </div>
             </div>
-    
-            <!-- FAQ Item 3 -->
+
             <div class="accordion-item">
                 <h2 class="accordion-header" id="faqHeadingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
                         Why should I take CDS22-Formula?
                     </button>
                 </h2>
-                <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree" data-bs-parent="#faqAccordion">
+                <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree"
+                    data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
                         No, CDS22-formula is a food supplement and does not replace a varied and balanced diet.
                     </div>
                 </div>
             </div>
-    
-            <!-- FAQ Item 4 -->
+
             <div class="accordion-item">
                 <h2 class="accordion-header" id="faqHeadingFour">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour">
                         How do I take CDS22-Formula?
                     </button>
                 </h2>
-                <div id="faqCollapseFour" class="accordion-collapse collapse" aria-labelledby="faqHeadingFour" data-bs-parent="#faqAccordion">
+                <div id="faqCollapseFour" class="accordion-collapse collapse" aria-labelledby="faqHeadingFour"
+                    data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
                         Keep this product out of reach of young children.
                     </div>
                 </div>
             </div>
-    
-            <!-- FAQ Item 5 -->
+
             <div class="accordion-item">
                 <h2 class="accordion-header" id="faqHeadingFour">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour">
                         Does CDS22-formula contain allergens?
                     </button>
                 </h2>
-                <div id="faqCollapseFour" class="accordion-collapse collapse" aria-labelledby="faqHeadingFour" data-bs-parent="#faqAccordion">
+                <div id="faqCollapseFour" class="accordion-collapse collapse" aria-labelledby="faqHeadingFour"
+                    data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
                         Keep this product out of reach of young children.
                     </div>
                 </div>
             </div>
-    
-            <!-- FAQ Item 6 -->
+
             <div class="accordion-item">
                 <h2 class="accordion-header" id="faqHeadingFour">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour">
-                        Why must CDS22-formula be stored in the refrigerator? 
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour">
+                        Why must CDS22-formula be stored in the refrigerator?
                     </button>
                 </h2>
-                <div id="faqCollapseFour" class="accordion-collapse collapse" aria-labelledby="faqHeadingFour" data-bs-parent="#faqAccordion">
+                <div id="faqCollapseFour" class="accordion-collapse collapse" aria-labelledby="faqHeadingFour"
+                    data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
                         Keep this product out of reach of young children.
                     </div>
@@ -508,92 +570,67 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-<section id="contact" class="container py-5">
-    <div class="row align-items-center rounded-custom shadow p-4 bg-light">
-      <!-- Form Section -->
-      <div class="col-lg-6">
-        <form id="contact-form">
-          <!-- Radio Buttons -->
-          <div class="d-flex justify-content-start mb-3">
-            <div class="form-check me-3">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="contactOption"
-                id="sayHi"
-                value="Say Hi"
-                checked
-              />
-              <label class="form-check-label" for="sayHi">Say Hi</label>
+    <!--================== Contact Section =====================-->
+    <section id="contact" class="container-fluid rounded p-5">
+        <div class="row align-items-center rounded-5 p-5 form-bg">
+            <div class="col-lg-6">
+                <form id="contact-form">
+                    <div class="d-flex justify-content-start mb-3">
+                        <div class="form-check me-3">
+                            <input class="form-check-input" type="radio" name="contactOption" id="sayHi" value="Say Hi"
+                                checked />
+                            <label class="form-check-label" for="sayHi">Say Hi</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="contactOption" id="getQuote"
+                                value="Get a Quote" />
+                            <label class="form-check-label" for="getQuote">Get a Quote</label>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Name" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email*</label>
+                        <input type="email" class="form-control" id="email" placeholder="Email" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message*</label>
+                        <textarea class="form-control" id="message" rows="3" placeholder="Message" required></textarea>
+                    </div>
+
+                    <div class="form-check mb-3">
+                        <input type="checkbox" class="form-check-input" id="privacyCheck" required />
+                        <label class="form-check-label" for="privacyCheck">
+                            I consent to the processing of personal data after reading the
+                            <a href="#">Privacy Policy</a>.
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                </form>
+
+                
             </div>
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="contactOption"
-                id="getQuote"
-                value="Get a Quote"
-              />
-              <label class="form-check-label" for="getQuote">Get a Quote</label>
+            
+            <div class="col-lg-6 text-center">
+                <h3 class="product-title">CDS22-formula</h3>
+                <img src="./Assets/cds_450_v2-1.png" alt="CDS22-formula" class="img-fluid product-image" />
             </div>
-          </div>
-  
-          <!-- Form Fields -->
-          <div class="mb-3">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control" id="name" placeholder="Name" required />
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Email*</label>
-            <input
-              type="email"
-              class="form-control"
-              id="email"
-              placeholder="Email"
-              required
-            />
-          </div>
-          <div class="mb-3">
-            <label for="message" class="form-label">Message*</label>
-            <textarea
-              class="form-control"
-              id="message"
-              rows="3"
-              placeholder="Message"
-              required
-            ></textarea>
-          </div>
-  
-          <!-- Privacy Checkbox -->
-          <div class="form-check mb-3">
-            <input
-              type="checkbox"
-              class="form-check-input"
-              id="privacyCheck"
-              required
-            />
-            <label class="form-check-label" for="privacyCheck">
-              I consent to the processing of personal data after reading the
-              <a href="#">Privacy Policy</a>.
-            </label>
-          </div>
-  
-          <button type="submit" class="btn btn-primary w-100">Send Message</button>
-        </form>
-      </div>
-  
-      <!-- Product Section -->
-      <div class="col-lg-6 text-center">
-        <h3 class="product-title">CDS22-formula</h3>
-        <img
-          src="./Assets/cds_450_v2-1.png"
-          alt="CDS22-formula"
-          class="img-fluid product-image"
-        />
-      </div>
+            
+        </div>
+        
+    </section>
+    <div class="curve">
+        <div class="custom-shape-divider-bottom-1735942112">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z" class="shape-fill"></path>
+            </svg>
+        </div>
     </div>
-  </section>
+    
     <script type="module" src="./firebaseConfig.js"></script>
     <script type="module" src="./app.js"></script>
 </body>
