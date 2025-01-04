@@ -15,34 +15,29 @@ const firebaseConfig = {
   appId: "1:743667522909:web:ee4620158b6df576815cb4"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-// const auth = getAuth(app);
 const db = getFirestore(app)
 console.log(db);
 
-document.getElementById('contact-form').addEventListener('submit', async (e) => {
-    e.preventDefault(); // Prevent the default form submission
+    document.getElementById('contact-form').addEventListener('submit', async (e) => {
+        e.preventDefault(); 
 
-    // Get form values
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
 
-    try {
-        // Add a new document with a generated ID in the "users" collection
-        await addDoc(collection(db, 'users'), {
-            name: name,
-            email: email,
-            message: message
-        });
-        alert('Message sent successfully!');
-        // Optionally, you can reset the form
-        document.getElementById('contact-form').reset();
-    } catch (error) {
-        console.error("Error adding document: ", error);
-        alert('Error sending message. Please try again.');
-    }
-});
+        try {
+            await addDoc(collection(db, 'users'), {
+                name: name,
+                email: email,
+                message: message
+            });
+            alert('Message sent successfully!');
+            document.getElementById('contact-form').reset();
+        } catch (error) {
+            console.error("Error adding document: ", error);
+            alert('Error sending message. Please try again.');
+        }
+    });
 
-export {db, collection, addDoc  }
+    export {db, collection, addDoc  }

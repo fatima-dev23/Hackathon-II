@@ -51,16 +51,16 @@ function addToCart(productName, productPrice, productImage) {
     });
 }
 
-// Update Cart UI
+
 function updateCartUI() {
     const cartBody = document.getElementById("cart-body");
     const cartTotal = document.getElementById("cart-total");
-    const cartCounts = document.getElementById("cart-counts"); // Reference to the badge element
+    const cartCounts = document.getElementById("cart-counts"); 
 
     if (cartItems.length === 0) {
         cartBody.innerHTML = `<p class="text-muted">No items in the cart</p>`;
         cartTotal.textContent = "0 PKR";
-        cartCounts.textContent = ""; // Clear the badge if the cart is empty
+        cartCounts.textContent = ""; 
         totalAmount = 0;
         return;
     }
@@ -68,11 +68,11 @@ function updateCartUI() {
     cartBody.innerHTML = "";
     totalAmount = 0;
 
-    let totalItems = 0; // Track the total number of items in the cart
+    let totalItems = 0; 
 
-    cartItems.forEach((item, index) => {
+    cartItems.forEach(item => {
         totalAmount += item.price * item.quantity;
-        totalItems += item.quantity; // Accumulate item quantities
+        totalItems += item.quantity; 
 
         const cartItem = document.createElement("div");
         cartItem.className = "d-flex justify-content-between align-items-center mb-2";
@@ -84,9 +84,9 @@ function updateCartUI() {
                 <small>${item.price} PKR</small>
             </div>
             <div class="d-flex align-items-center">
-                <button class="btn btn-sm btn-outline-secondary me-2" onclick="changeQuantity(${index}, -1)">-</button>
+                <button class="btn btn-sm btn-outline-secondary me-2" onclick="changeQuantity('${item.name}', -1)">-</button>
                 <span>${item.quantity}</span>
-                <button class="btn btn-sm btn-outline-secondary ms-2" onclick="changeQuantity(${index}, 1)">+</button>
+                <button class="btn btn-sm btn-outline-secondary ms-2" onclick="changeQuantity('${item.name}', 1)">+</button>
             </div>
         `;
 
@@ -95,29 +95,29 @@ function updateCartUI() {
 
     cartTotal.textContent = `${totalAmount.toFixed(2)} PKR`;
 
-    // Update the cart-counts badge
     cartCounts.textContent = totalItems;
 
-    // Show/hide the badge based on whether there are items in the cart
     cartCounts.style.display = totalItems > 0 ? "inline" : "none";
 }
 
 
-// Change Quantity of Items
-function changeQuantity(index, change) {
-    cartItems[index].quantity += change;
+function changeQuantity(productName, change) {
+    const item = cartItems.find(item => item.name === productName);
 
-    if (cartItems[index].quantity <= 0) {
-        cartItems.splice(index, 1); 
+    if (item) {
+        item.quantity += change;
+
+        if (item.quantity <= 0) {
+            cartItems = cartItems.filter(item => item.name !== productName);
+        }
     }
 
     updateCartUI();
 }
 
-// Initialize
+
 initializeCartUI();
 
-// Add event listeners to "Shop Now" buttons
 document.querySelectorAll('.btn-shop').forEach(button => {
     button.addEventListener('click', () => {
         const productName = button.getAttribute('data-name');
