@@ -17,9 +17,11 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="shortcut icon" href="./Assets/cds_450_v2-1.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
+    <!--=============================== NAV ================================-->
     <!-- <div class="container-fluid"> -->
     <nav class="navbar navbar-expand-lg p-4">
         <div class="container-fluid">
@@ -53,7 +55,7 @@
                         <a class="nav-link" href="#">Become A Retailer</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact Us</a>
+                        <a class="nav-link" href="#contact">Contact Us</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Receipe</a>
@@ -72,10 +74,11 @@
 <!-- </div> -->
     <div class="cart-container d-none"></div>
 
+    <!-- ============================== START ================================-->
     <section id="start">
         <div class="container-fluid p-5">
             <div class="row">
-                <div class="col-lg-6 left-content">
+                <div class="col-lg-6 left-content" data-aos="fade-up-left">
                     <p class="text-sm fs-1 lh-1 display-1 fw-bold" style="font-size: 50px !important;">
                         The <span class="fw-bolder" style="color: #073052;">De Simone <br>
                             Formulation</span> unique <br> and certified by <span class="fw-bolder"
@@ -88,7 +91,7 @@
                     </p>
 
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6" data-aos="fade-up-right">
                     <img src="./Assets/double-img.png" class="img-fluid" alt="" height="400px" style="z-index: 2;">
                 </div>
             </div>
@@ -103,24 +106,25 @@
         </svg>
     </div>
 
+    <!--============================= DOCTOR =================================-->
     <section id="doctor">
         <div class="container-fluid">
             <div class="row p-5">
-                <div class="col-lg-6 left-content">
+                <div class="col-lg-6 left-content" data-aos="fade-up" data-aos-duration="3000">
                     <img src="./Assets/professor_desimone-1.png" alt="prof"
                         class="img-fluid shadow-lg p-1 mt-4 mb-5 ms-2 bg-body-tertiary rounded-pill" height="500px" width="500px">
                 </div>
 
-                <div class="col-lg-6 right-content mt-5">
+                <div class="col-lg-6 right-content mt-5" data-aos="fade-up-left">
                     <h1 class="fw-bold display-5"><span>Science</span> Speaks <br> For <span>Itself</span></h1>
-                    <p class="text-sm fs-4" style="font-size: 15px !important; width: 80%;">
+                    <p class="text-sm fs-4 lh-1" style="font-size: 15px !important; width: 80%;">
                         The De Simone Formulation contained in CDS22-formula is the only
                         probiotic formulation recommended and recognized by name in
                         the American College of Gastroenterology AGA guidelines for the
                         management of pouchitis and other pouch related disorders (Olleik
                         et al., Gastroenterology, Vol. 164, No. 6, 2023).
                     </p>
-                    <p class="text-sm fs-4" style="font-size: 15px !important; width: 80%;">
+                    <p class="text-sm fs-4 lh-1" style="font-size: 15px !important; width: 80%;">
                         The European Crohn s and Colitis Organization (ECCO) has included
                         the De Simone Formulation in its guidelines for the management of
                         Inflammatory Bowel Diseases (IBD) (ECCO, ECCO News, 2023).
@@ -145,20 +149,20 @@
         <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="%2371B7D6"><path d="M0 1v99c134.3 0 153.7-99 296-99H0Z" opacity=".5"></path><path d="M1000 4v86C833.3 90 833.3 3.6 666.7 3.6S500 90 333.3 90 166.7 4 0 4h1000Z" opacity=".5"></path><path d="M617 1v86C372 119 384 1 196 1h421Z" opacity=".5"></path><path d="M1000 0H0v52C62.5 28 125 4 250 4c250 0 250 96 500 96 125 0 187.5-24 250-48V0Z"></path></svg> -->
     </section>
     
-<!--================== WHY  ======================-->
+<!--=================================== WHY  =====================================-->
     <section id="work">
         <div class="container-fluid">
             <div class="row p-5">
-                <div class="col-lg-6 left-content p-4">
+                <div class="col-lg-6 left-content p-4" data-aos="zoom-in-right">
                     <h1 class="fw-bold">Why Does It <span style="color: rgb(254, 0, 174);">Work</span>?</h1>
-                    <p class="text-sm fs-2 mx-auto" style="font-size: 15px !important;">
+                    <p class="text-sm fs-2 mx-auto lh-1" style="font-size: 15px !important;">
                         Not all probiotics are the same. The overall biological action of a probiotic is not
                         simply the sum of its individual components actions but the result of a complex
                         network of relationships between the microorganisms it contains and the human
                         host. Unlike many other products on the market, the clinical results obtained
                         from CDS22-formula speak louder than any technical description.</p>
 
-                    <p class="text-sm fs-2 mx-auto" style="font-size: 15px !important;">
+                    <p class="text-sm fs-2 mx-auto lh-1" style="font-size: 15px !important;">
                         CDS22-formula combines 8 bacterial strains selected for their biochemical and
                         enzymatic profiles and specifically calibrated in precise proportions to
                         synergistically act on the physiology of the human gastrointestinal tract.
@@ -179,7 +183,7 @@
                         proven and replicable clinical results
                     </p>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6" data-aos="zoom-in-left">
                     <img src="./Assets/Cycle.png" class="img-fluid" alt="" height="500px">
                 </div>
             </div>
@@ -194,15 +198,15 @@
         </svg>
     </div>
 
-    <!--============= BENEFITS ================-->
+    <!--================================= BENEFITS ===============================-->
     <section id="benefits">
         <div class="container-fluid">
             <div class="row p-5">
-                <div class="col-md-2 left-col">
+                <div class="col-md-2 left-col" data-aos="flip-right" data-aos-duration="2000">
                     <div class="vertical-text fs-1 fw-bold" style="font-size: 90px !important;">Benefits:</div>
                 </div>
                 <div class="col-md-10 right-col">
-                    <div class="decorative-border p-5 rounded-5">
+                    <div class="decorative-border p-5 rounded-5 lh-1" data-aos="fade-up" data-aos-duration="3000">
                         <p><strong>CDS22-formula supports the dietary management of intestinal dysbiosis, contributing
                                 to well-being in cases of intestinal disorders connected to irritable bowel syndrome,
                                 ulcerative colitis, and pouchitis.</strong></p>
@@ -247,21 +251,21 @@
         </svg>
     </div>
 
-<!--================= FORMULATION ==================-->
+<!--======================================= FORMULATION ========================================-->
     <section id="formulation">
         <div class="container-fluid">
             <div class="row p-5">
                 <div class="col-lg-12 p-4 mb-2">
                     <h1 class="display-5 fw-bold" style="color: #002441;">De <span style="color: rgb(254, 0, 174);">Simone</span> <span
                             style="color: rgb(39, 166, 220);">Formulation</span></h1>
-                    <p class="text-sm fs-2 mx-auto text-justify" style="font-size: 15px !important;">The De Simone
+                    <p class="text-sm fs-2 mx-auto text-justify lh-1" style="font-size: 15px !important;">The De Simone
                         Formulation contained in CDS22-formula is the result of pioneering research by Professor Claudio
                         De Simone (MD, FAGA), who redefined
                         therapeutic approaches to intestinal health by introducing the use of high concentration
                         probiotic mixtures to dietetically manage acute and chronic
                         gastrointestinal disorders.
                     </p>
-                    <p class="text-sm fs-2 mx-auto text-justify" style="font-size: 15px !important;">
+                    <p class="text-sm fs-2 mx-auto text-justify lh-1" style="font-size: 15px !important;">
                         His interest in the intestinal microbiota dates back to the 1980s when the importance of the
                         intestinal flora s role was just beginning to be
                         understood. Professor De Simone is an honorary member of the American College of
@@ -269,22 +273,22 @@
                         Surgery, specialized in gastroenterology, allergology, and clinical immunology. He taught
                         Infectious Diseases at the University of L’Aquila (Italy).
                     </p>
-                    <p class="text-sm fs-2 mx-auto text-justify" style="font-size: 15px !important;">
+                    <p class="text-sm fs-2 mx-auto text-justify lh-1" style="font-size: 15px !important;">
                         He has published over 200 clinical studies, scientific articles, and book chapters.
                     </p>
-                    <p class="text-sm fs-2 mx-auto text-justify" style="font-size: 15px !important;">
+                    <p class="text-sm fs-2 mx-auto text-justify lh-1" style="font-size: 15px !important;">
                         Since the commercial launch of his renowned De Simone Formulation in the 1990s, the Professor
                         has actively advocated for better regulation and quality
                         control of probiotics, highlighting the potential health and well-being risks.
                     </p>
-                    <p class="text-sm fs-2 mx-auto text-justify" style="font-size: 15px !important;">
+                    <p class="text-sm fs-2 mx-auto text-justify lh-1" style="font-size: 15px !important;">
                         As emphasized by Professor De Simone in numerous conferences and publications, many marketed
                         probiotics have not been clinically tested or may not
                         correspond to the original clinically tested formulations when marketed, causing substantial
                         differences in the safety and efficacy of the final product (De
                         Simone C. Clinical Gastroenterology and Hepatology Vol. 16 No. 9 2018).
                     </p>
-                    <p class="text-sm fs-2 mx-auto text-justify" style="font-size: 15px !important;">
+                    <p class="text-sm fs-2 mx-auto text-justify lh-1" style="font-size: 15px !important;">
                         Current regulations often do not require thorough comparative studies to ensure that changes in
                         manufacturing processes do not compromise the efficacy and
                         safety of the commercially distributed probiotic product.
@@ -294,7 +298,7 @@
                     <h1 class="display-5 fw-bold lh-1"><span style="color:#002441;">There is ONE <br> De </span><span
                             style="color: rgb(254, 0, 174);">Simone</span> <span
                             style="color: rgb(39, 166, 220);">Formulation</span></h1>
-                    <p class="text-sm fs-2 mx-auto text-justify" style="font-size: 15px !important;">The lack of strict
+                    <p class="text-sm fs-2 mx-auto text-justify lh-1" style="font-size: 15px !important;">The lack of strict
                         regulation and the possibility for manufacturers to modify formulations without adequately
                         informing consumers pose a threat to public trust.
                         In the past, the De Simone Formulation (DSF) was sold under the brand name VSL#3®*, by VSL
@@ -331,7 +335,7 @@
         </svg>
     </div>
 
-    <!-- ====================== PRODUCT PACKAGING ===============================  -->
+    <!-- =============================== PRODUCT PACKAGING ===============================  -->
     <section id="packaging">
         <div class="container-fluid py-5">
             <div class="section-title justify-content-center p-3">
@@ -573,7 +577,7 @@
     <!--================== Contact Section =====================-->
     <section id="contact" class="container-fluid rounded p-5">
         <div class="row align-items-center rounded-5 p-5 form-bg">
-            <div class="col-lg-6">
+            <div class="col-lg-6" data-aos="fade-up" data-aos-duration="2000">
                 <form id="contact-form">
                     <div class="d-flex justify-content-start mb-3">
                         <div class="form-check me-3">
@@ -633,6 +637,10 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="module" src="./firebaseConfig.js"></script>
     <script type="module" src="./app.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 
 </html>

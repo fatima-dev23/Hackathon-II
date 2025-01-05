@@ -6,17 +6,6 @@ body {
     padding: 0;
 }
 
-@font-face {
-    font-family: 'NeoGothic';
-    /* Name of the font */
-    src: url('./Assets/NeoGothisADFStd-Bold.otf') format('opentype');
-    /* Path to the font file */
-    font-weight: normal;
-    /* Optional: set the weight */
-    font-style: normal;
-    /* Optional: set the style */
-}
-
 nav {
     background-color: #fff;
 }

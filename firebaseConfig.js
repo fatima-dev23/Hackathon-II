@@ -40,4 +40,4 @@ console.log(db);
         }
     });
 
-    export {db, collection, addDoc  }
+    export { db, collection, addDoc  }
