@@ -445,3 +445,42 @@ section.container.my-5 {
 .custom-shape-divider-bottom-1735945307 .shape-fill {
     fill: #FFA567C9;
 }
+
+@media (max-width: 768px) {
+
+  /* NAV FIX */
+  .navbar-nav {
+    gap: 1rem !important;
+    text-align: center;
+  }
+
+  /* HERO SECTION */
+  #start .row {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  #start p.display-1 {
+    font-size: 32px !important;
+    line-height: 1.3;
+  }
+
+  #start img {
+    width: 85%;
+    margin: 0 auto 20px;
+    display: block;
+  }
+
+  /* GENERAL TEXT WIDTH FIX */
+  .right-content p,
+  .left-content p {
+    width: 100% !important;
+  }
+
+  /* BIG VERTICAL TEXT */
+  .vertical-text {
+    font-size: 40px !important;
+    writing-mode: horizontal-tb;
+  }
+
+}
